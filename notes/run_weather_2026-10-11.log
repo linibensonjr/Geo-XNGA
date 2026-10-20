@@ -1,0 +1,733 @@
+C:\Users\SIU856619791\AppData\Local\miniforge3\envs\geox\lib\site-packages\google\api_core\_python_version_support.py:261: FutureWarning: You are using a Python version (3.10.13) past its end of life. Google will update google.api_core with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade to the latest Python version, or at least Python 3.11, and then update google.api_core.
+  warnings.warn(message, FutureWarning)
+C:\Users\SIU856619791\AppData\Local\miniforge3\envs\geox\lib\site-packages\google\auth\transport\grpc.py:44: FutureWarning: grpcio < 1.83.0 does not support Post-Quantum Cryptography (PQC). Support for non-PQC environments is deprecated. In October 2026, google-auth will raise its minimum requirements to enforce grpcio >= 1.83.0. For more details on Google Cloud's post-quantum security migration, visit: https://cloud.google.com/security/resources/post-quantum-cryptography
+  warnings.warn(
+Building DAG of jobs...
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job                 count
+----------------  -------
+get_weather_data        1
+run_weather             1
+total                   2
+
+Select jobs to execute...
+
+[Sun Oct 11 05:50:35 2026]
+rule get_weather_data:
+    input: data/NG/hex_final_NG.geojson
+    output: cutouts/NG_2023.nc
+    jobid: 1
+    reason: Missing output files: cutouts/NG_2023.nc
+    wildcards: country=NG, weather_year=2023
+    resources: tmpdir=C:\Users\SIU856~1\AppData\Local\Temp
+
+INFO:atlite.cutout:Building new cutout cutouts\NG_2023.nc
+INFO:atlite.data:Storing temporary files in temp
+INFO:atlite.data:Calculating and writing with module era5:
+INFO:atlite.datasets.era5:Requesting data for feature influx...
+INFO:atlite.datasets.era5:Requesting data for feature temperature...
+INFO:atlite.datasets.era5:Requesting data for feature runoff...
+INFO:atlite.datasets.era5:Requesting data for feature wind...
+INFO:atlite.datasets.era5:Requesting data for feature height...
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	2m_temperature (2023-1)
+	soil_temperature_level_4 (2023-1)
+	2m_dewpoint_temperature (2023-1)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-3/2026-10-11/2978e45b89a1d90e65f090381cd8fe22.nc
+
+2978e45b89a1d90e65f090381cd8fe22.nc:   0%|          | 0.00/5.61M [00:00<?, ?B/s]
+2978e45b89a1d90e65f090381cd8fe22.nc:  18%|█▊        | 1.00M/5.61M [00:01<00:06, 737kB/s]
+2978e45b89a1d90e65f090381cd8fe22.nc:  36%|███▌      | 2.00M/5.61M [00:01<00:02, 1.61MB/s]
+2978e45b89a1d90e65f090381cd8fe22.nc:  53%|█████▎    | 3.00M/5.61M [00:01<00:01, 2.38MB/s]
+2978e45b89a1d90e65f090381cd8fe22.nc: 100%|██████████| 5.61M/5.61M [00:01<00:00, 5.38MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	surface_net_solar_radiation (2023-1)
+	surface_solar_radiation_downwards (2023-1)
+	toa_incident_solar_radiation (2023-1)
+	total_sky_direct_solar_radiation_at_surface (2023-1)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-1/2026-10-11/803303e4c64a39886d4a2dcd08f0e54d.nc
+
+803303e4c64a39886d4a2dcd08f0e54d.nc:   0%|          | 0.00/4.60M [00:00<?, ?B/s]
+803303e4c64a39886d4a2dcd08f0e54d.nc:  22%|██▏       | 1.00M/4.60M [00:01<00:05, 650kB/s]
+803303e4c64a39886d4a2dcd08f0e54d.nc:  44%|████▎     | 2.00M/4.60M [00:01<00:02, 1.31MB/s]
+803303e4c64a39886d4a2dcd08f0e54d.nc:  65%|██████▌   | 3.00M/4.60M [00:01<00:00, 2.14MB/s]
+803303e4c64a39886d4a2dcd08f0e54d.nc: 100%|██████████| 4.60M/4.60M [00:02<00:00, 3.70MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	geopotential (2023-1)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-3/2026-10-11/a31dd82720eaa73203552d99756e3da1.nc
+
+a31dd82720eaa73203552d99756e3da1.nc:   0%|          | 0.00/30.7k [00:00<?, ?B/s]
+a31dd82720eaa73203552d99756e3da1.nc: 100%|██████████| 30.7k/30.7k [00:00<00:00, 37.8kB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	10m_u_component_of_wind (2023-1)
+	10m_v_component_of_wind (2023-1)
+	100m_u_component_of_wind (2023-1)
+	100m_v_component_of_wind (2023-1)
+	forecast_surface_roughness (2023-1)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-3/2026-10-11/eb930c24b16348d5b50833236618c9aa.nc
+
+eb930c24b16348d5b50833236618c9aa.nc:   0%|          | 0.00/14.0M [00:00<?, ?B/s]
+eb930c24b16348d5b50833236618c9aa.nc:   7%|▋         | 1.00M/14.0M [00:01<00:19, 714kB/s]
+eb930c24b16348d5b50833236618c9aa.nc:  14%|█▍        | 2.00M/14.0M [00:01<00:09, 1.39MB/s]
+eb930c24b16348d5b50833236618c9aa.nc:  29%|██▊       | 4.00M/14.0M [00:01<00:03, 2.94MB/s]
+eb930c24b16348d5b50833236618c9aa.nc:  36%|███▌      | 5.00M/14.0M [00:02<00:02, 3.24MB/s]
+eb930c24b16348d5b50833236618c9aa.nc:  43%|████▎     | 6.00M/14.0M [00:02<00:02, 3.51MB/s]
+eb930c24b16348d5b50833236618c9aa.nc:  50%|████▉     | 7.00M/14.0M [00:02<00:01, 3.76MB/s]
+eb930c24b16348d5b50833236618c9aa.nc:  57%|█████▋    | 8.00M/14.0M [00:02<00:01, 3.94MB/s]
+eb930c24b16348d5b50833236618c9aa.nc:  64%|██████▍   | 9.00M/14.0M [00:03<00:01, 4.05MB/s]
+eb930c24b16348d5b50833236618c9aa.nc:  71%|███████▏  | 10.0M/14.0M [00:03<00:01, 4.17MB/s]
+eb930c24b16348d5b50833236618c9aa.nc:  78%|███████▊  | 11.0M/14.0M [00:03<00:00, 4.84MB/s]
+eb930c24b16348d5b50833236618c9aa.nc:  86%|████████▌ | 12.0M/14.0M [00:03<00:00, 4.74MB/s]
+eb930c24b16348d5b50833236618c9aa.nc:  93%|█████████▎| 13.0M/14.0M [00:04<00:00, 4.57MB/s]
+eb930c24b16348d5b50833236618c9aa.nc: 100%|█████████▉| 14.0M/14.0M [00:04<00:00, 4.53MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	runoff (2023-1)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-3/2026-10-11/ce46b20a33a383586ba4dc453d604d18.nc
+
+ce46b20a33a383586ba4dc453d604d18.nc:   0%|          | 0.00/474k [00:00<?, ?B/s]
+ce46b20a33a383586ba4dc453d604d18.nc: 100%|██████████| 474k/474k [00:01<00:00, 357kB/s]
+                                                                                      
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	2m_temperature (2023-2)
+	soil_temperature_level_4 (2023-2)
+	2m_dewpoint_temperature (2023-2)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-2/2026-10-11/1b636861a31b290f5c81bedb854474b5.nc
+
+1b636861a31b290f5c81bedb854474b5.nc:   0%|          | 0.00/5.07M [00:00<?, ?B/s]
+1b636861a31b290f5c81bedb854474b5.nc:  20%|█▉        | 1.00M/5.07M [00:01<00:05, 736kB/s]
+1b636861a31b290f5c81bedb854474b5.nc:  39%|███▉      | 2.00M/5.07M [00:01<00:02, 1.61MB/s]
+1b636861a31b290f5c81bedb854474b5.nc:  59%|█████▉    | 3.00M/5.07M [00:01<00:00, 2.50MB/s]
+1b636861a31b290f5c81bedb854474b5.nc:  99%|█████████▊| 5.00M/5.07M [00:01<00:00, 4.88MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	surface_net_solar_radiation (2023-2)
+	surface_solar_radiation_downwards (2023-2)
+	toa_incident_solar_radiation (2023-2)
+	total_sky_direct_solar_radiation_at_surface (2023-2)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-2/2026-10-11/3520e651b1cc9d1f4ec6b6d993f61275.nc
+
+3520e651b1cc9d1f4ec6b6d993f61275.nc:   0%|          | 0.00/4.20M [00:00<?, ?B/s]
+3520e651b1cc9d1f4ec6b6d993f61275.nc:  24%|██▍       | 1.00M/4.20M [00:01<00:04, 720kB/s]
+3520e651b1cc9d1f4ec6b6d993f61275.nc:  48%|████▊     | 2.00M/4.20M [00:01<00:01, 1.58MB/s]
+3520e651b1cc9d1f4ec6b6d993f61275.nc:  71%|███████▏  | 3.00M/4.20M [00:01<00:00, 2.30MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	runoff (2023-2)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-3/2026-10-11/fece1d7778d666897c0e4a1813b6bb25.nc
+
+fece1d7778d666897c0e4a1813b6bb25.nc:   0%|          | 0.00/420k [00:00<?, ?B/s]
+fece1d7778d666897c0e4a1813b6bb25.nc: 100%|██████████| 420k/420k [00:01<00:00, 353kB/s]
+                                                                                      
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	10m_u_component_of_wind (2023-2)
+	10m_v_component_of_wind (2023-2)
+	100m_u_component_of_wind (2023-2)
+	100m_v_component_of_wind (2023-2)
+	forecast_surface_roughness (2023-2)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-3/2026-10-11/257e557bcaf49e4f4a9c8752437d4d09.nc
+
+257e557bcaf49e4f4a9c8752437d4d09.nc:   0%|          | 0.00/12.6M [00:00<?, ?B/s]
+257e557bcaf49e4f4a9c8752437d4d09.nc:   8%|▊         | 1.00M/12.6M [00:01<00:15, 766kB/s]
+257e557bcaf49e4f4a9c8752437d4d09.nc:  16%|█▌        | 2.00M/12.6M [00:01<00:06, 1.64MB/s]
+257e557bcaf49e4f4a9c8752437d4d09.nc:  24%|██▍       | 3.00M/12.6M [00:01<00:03, 2.62MB/s]
+257e557bcaf49e4f4a9c8752437d4d09.nc:  32%|███▏      | 4.00M/12.6M [00:01<00:02, 3.65MB/s]
+257e557bcaf49e4f4a9c8752437d4d09.nc:  40%|███▉      | 5.00M/12.6M [00:01<00:01, 4.58MB/s]
+257e557bcaf49e4f4a9c8752437d4d09.nc:  48%|████▊     | 6.00M/12.6M [00:01<00:01, 5.51MB/s]
+257e557bcaf49e4f4a9c8752437d4d09.nc:  55%|█████▌    | 7.00M/12.6M [00:02<00:00, 6.24MB/s]
+257e557bcaf49e4f4a9c8752437d4d09.nc:  63%|██████▎   | 8.00M/12.6M [00:02<00:00, 5.63MB/s]
+257e557bcaf49e4f4a9c8752437d4d09.nc:  71%|███████▏  | 9.00M/12.6M [00:02<00:00, 6.29MB/s]
+257e557bcaf49e4f4a9c8752437d4d09.nc:  79%|███████▉  | 10.0M/12.6M [00:02<00:00, 6.87MB/s]
+257e557bcaf49e4f4a9c8752437d4d09.nc:  87%|████████▋ | 11.0M/12.6M [00:02<00:00, 7.32MB/s]
+257e557bcaf49e4f4a9c8752437d4d09.nc:  95%|█████████▌| 12.0M/12.6M [00:02<00:00, 7.76MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	2m_temperature (2023-3)
+	soil_temperature_level_4 (2023-3)
+	2m_dewpoint_temperature (2023-3)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-3/2026-10-11/c9c3e0a6e765e8ee96b24c30571e1d4d.nc
+
+c9c3e0a6e765e8ee96b24c30571e1d4d.nc:   0%|          | 0.00/5.77M [00:00<?, ?B/s]
+c9c3e0a6e765e8ee96b24c30571e1d4d.nc:  17%|█▋        | 1.00M/5.77M [00:01<00:06, 730kB/s]
+c9c3e0a6e765e8ee96b24c30571e1d4d.nc:  35%|███▍      | 2.00M/5.77M [00:01<00:02, 1.57MB/s]
+c9c3e0a6e765e8ee96b24c30571e1d4d.nc:  52%|█████▏    | 3.00M/5.77M [00:01<00:01, 2.52MB/s]
+c9c3e0a6e765e8ee96b24c30571e1d4d.nc:  69%|██████▉   | 4.00M/5.77M [00:01<00:00, 3.29MB/s]
+c9c3e0a6e765e8ee96b24c30571e1d4d.nc: 100%|██████████| 5.77M/5.77M [00:01<00:00, 5.42MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	surface_net_solar_radiation (2023-3)
+	surface_solar_radiation_downwards (2023-3)
+	toa_incident_solar_radiation (2023-3)
+	total_sky_direct_solar_radiation_at_surface (2023-3)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-1/2026-10-11/1723e92a4ea11bd04c3d685d544fd052.nc
+
+1723e92a4ea11bd04c3d685d544fd052.nc:   0%|          | 0.00/5.01M [00:00<?, ?B/s]
+1723e92a4ea11bd04c3d685d544fd052.nc:  20%|█▉        | 1.00M/5.01M [00:01<00:05, 746kB/s]
+1723e92a4ea11bd04c3d685d544fd052.nc:  40%|███▉      | 2.00M/5.01M [00:01<00:02, 1.37MB/s]
+1723e92a4ea11bd04c3d685d544fd052.nc:  80%|███████▉  | 4.00M/5.01M [00:01<00:00, 2.91MB/s]
+1723e92a4ea11bd04c3d685d544fd052.nc: 100%|█████████▉| 5.00M/5.01M [00:02<00:00, 3.64MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	runoff (2023-3)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-1/2026-10-11/f4691b2fc18cdc399524b446bdf934fd.nc
+
+f4691b2fc18cdc399524b446bdf934fd.nc:   0%|          | 0.00/603k [00:00<?, ?B/s]
+f4691b2fc18cdc399524b446bdf934fd.nc: 100%|██████████| 603k/603k [00:01<00:00, 458kB/s]
+                                                                                      
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	10m_u_component_of_wind (2023-3)
+	10m_v_component_of_wind (2023-3)
+	100m_u_component_of_wind (2023-3)
+	100m_v_component_of_wind (2023-3)
+	forecast_surface_roughness (2023-3)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-1/2026-10-11/e09237ebed7f5ae58eb53c1dd4e8dba5.nc
+
+e09237ebed7f5ae58eb53c1dd4e8dba5.nc:   0%|          | 0.00/14.5M [00:00<?, ?B/s]
+e09237ebed7f5ae58eb53c1dd4e8dba5.nc:   7%|▋         | 1.00M/14.5M [00:01<00:19, 733kB/s]
+e09237ebed7f5ae58eb53c1dd4e8dba5.nc:  14%|█▍        | 2.00M/14.5M [00:01<00:08, 1.59MB/s]
+e09237ebed7f5ae58eb53c1dd4e8dba5.nc:  28%|██▊       | 4.00M/14.5M [00:01<00:02, 3.73MB/s]
+e09237ebed7f5ae58eb53c1dd4e8dba5.nc:  41%|████▏     | 6.00M/14.5M [00:01<00:01, 5.77MB/s]
+e09237ebed7f5ae58eb53c1dd4e8dba5.nc:  55%|█████▌    | 8.00M/14.5M [00:01<00:00, 7.82MB/s]
+e09237ebed7f5ae58eb53c1dd4e8dba5.nc:  69%|██████▉   | 10.0M/14.5M [00:02<00:00, 8.07MB/s]
+e09237ebed7f5ae58eb53c1dd4e8dba5.nc:  83%|████████▎ | 12.0M/14.5M [00:02<00:00, 8.32MB/s]
+e09237ebed7f5ae58eb53c1dd4e8dba5.nc:  97%|█████████▋| 14.0M/14.5M [00:02<00:00, 9.85MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	2m_temperature (2023-4)
+	soil_temperature_level_4 (2023-4)
+	2m_dewpoint_temperature (2023-4)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-2/2026-10-11/1b44c653c391668e92f42fbb47323188.nc
+
+1b44c653c391668e92f42fbb47323188.nc:   0%|          | 0.00/5.56M [00:00<?, ?B/s]
+1b44c653c391668e92f42fbb47323188.nc:  18%|█▊        | 1.00M/5.56M [00:01<00:06, 738kB/s]
+1b44c653c391668e92f42fbb47323188.nc:  36%|███▌      | 2.00M/5.56M [00:01<00:02, 1.60MB/s]
+1b44c653c391668e92f42fbb47323188.nc:  72%|███████▏  | 4.00M/5.56M [00:01<00:00, 3.72MB/s]
+1b44c653c391668e92f42fbb47323188.nc: 100%|██████████| 5.56M/5.56M [00:01<00:00, 5.23MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	surface_net_solar_radiation (2023-4)
+	surface_solar_radiation_downwards (2023-4)
+	toa_incident_solar_radiation (2023-4)
+	total_sky_direct_solar_radiation_at_surface (2023-4)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-3/2026-10-11/50d58fa9a005ce83104014e0e30f75a2.nc
+
+50d58fa9a005ce83104014e0e30f75a2.nc:   0%|          | 0.00/4.95M [00:00<?, ?B/s]
+50d58fa9a005ce83104014e0e30f75a2.nc:  20%|██        | 1.00M/4.95M [00:01<00:05, 725kB/s]
+50d58fa9a005ce83104014e0e30f75a2.nc:  40%|████      | 2.00M/4.95M [00:01<00:02, 1.48MB/s]
+50d58fa9a005ce83104014e0e30f75a2.nc:  81%|████████  | 4.00M/4.95M [00:01<00:00, 3.30MB/s]
+50d58fa9a005ce83104014e0e30f75a2.nc: 100%|██████████| 4.95M/4.95M [00:01<00:00, 3.71MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	runoff (2023-4)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-2/2026-10-11/854db9d72f8c6d1e07c5cbdcc6f99f8.nc
+
+854db9d72f8c6d1e07c5cbdcc6f99f8.nc:   0%|          | 0.00/686k [00:00<?, ?B/s]
+854db9d72f8c6d1e07c5cbdcc6f99f8.nc: 100%|██████████| 686k/686k [00:01<00:00, 507kB/s]
+                                                                                     
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	10m_u_component_of_wind (2023-4)
+	10m_v_component_of_wind (2023-4)
+	100m_u_component_of_wind (2023-4)
+	100m_v_component_of_wind (2023-4)
+	forecast_surface_roughness (2023-4)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-3/2026-10-11/600c875a7361d0981b2119cabe589f97.nc
+
+600c875a7361d0981b2119cabe589f97.nc:   0%|          | 0.00/14.1M [00:00<?, ?B/s]
+600c875a7361d0981b2119cabe589f97.nc:   7%|▋         | 1.00M/14.1M [00:01<00:19, 687kB/s]
+600c875a7361d0981b2119cabe589f97.nc:  14%|█▍        | 2.00M/14.1M [00:01<00:09, 1.35MB/s]
+600c875a7361d0981b2119cabe589f97.nc:  28%|██▊       | 4.00M/14.1M [00:02<00:04, 2.60MB/s]
+600c875a7361d0981b2119cabe589f97.nc:  43%|████▎     | 6.00M/14.1M [00:02<00:02, 3.87MB/s]
+600c875a7361d0981b2119cabe589f97.nc:  50%|████▉     | 7.00M/14.1M [00:02<00:01, 4.47MB/s]
+600c875a7361d0981b2119cabe589f97.nc:  57%|█████▋    | 8.00M/14.1M [00:02<00:01, 4.51MB/s]
+600c875a7361d0981b2119cabe589f97.nc:  64%|██████▍   | 9.00M/14.1M [00:02<00:01, 5.13MB/s]
+600c875a7361d0981b2119cabe589f97.nc:  71%|███████   | 10.0M/14.1M [00:02<00:00, 5.76MB/s]
+600c875a7361d0981b2119cabe589f97.nc:  78%|███████▊  | 11.0M/14.1M [00:03<00:00, 6.39MB/s]
+600c875a7361d0981b2119cabe589f97.nc:  85%|████████▌ | 12.0M/14.1M [00:03<00:00, 5.64MB/s]
+600c875a7361d0981b2119cabe589f97.nc:  92%|█████████▏| 13.0M/14.1M [00:03<00:00, 6.15MB/s]
+600c875a7361d0981b2119cabe589f97.nc:  99%|█████████▉| 14.0M/14.1M [00:03<00:00, 5.79MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	2m_temperature (2023-5)
+	soil_temperature_level_4 (2023-5)
+	2m_dewpoint_temperature (2023-5)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-1/2026-10-11/48e99e3f5d60651040a826d4bc828dc8.nc
+
+48e99e3f5d60651040a826d4bc828dc8.nc:   0%|          | 0.00/5.59M [00:00<?, ?B/s]
+48e99e3f5d60651040a826d4bc828dc8.nc:  18%|█▊        | 1.00M/5.59M [00:01<00:06, 722kB/s]
+48e99e3f5d60651040a826d4bc828dc8.nc:  36%|███▌      | 2.00M/5.59M [00:01<00:02, 1.56MB/s]
+48e99e3f5d60651040a826d4bc828dc8.nc:  54%|█████▎    | 3.00M/5.59M [00:01<00:01, 2.29MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	runoff (2023-5)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-2/2026-10-11/73f6db63eef9f6838932943b5ab1e415.nc
+
+73f6db63eef9f6838932943b5ab1e415.nc:   0%|          | 0.00/855k [00:00<?, ?B/s]
+73f6db63eef9f6838932943b5ab1e415.nc: 100%|██████████| 855k/855k [00:01<00:00, 607kB/s]
+                                                                                      
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	surface_net_solar_radiation (2023-5)
+	surface_solar_radiation_downwards (2023-5)
+	toa_incident_solar_radiation (2023-5)
+	total_sky_direct_solar_radiation_at_surface (2023-5)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-2/2026-10-11/dd84fc31482f203cf8153888e4c0456d.nc
+
+dd84fc31482f203cf8153888e4c0456d.nc:   0%|          | 0.00/5.23M [00:00<?, ?B/s]
+dd84fc31482f203cf8153888e4c0456d.nc:  19%|█▉        | 1.00M/5.23M [00:01<00:06, 736kB/s]
+dd84fc31482f203cf8153888e4c0456d.nc:  38%|███▊      | 2.00M/5.23M [00:01<00:02, 1.49MB/s]
+dd84fc31482f203cf8153888e4c0456d.nc:  76%|███████▋  | 4.00M/5.23M [00:01<00:00, 3.35MB/s]
+dd84fc31482f203cf8153888e4c0456d.nc:  96%|█████████▌| 5.00M/5.23M [00:01<00:00, 4.13MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	10m_u_component_of_wind (2023-5)
+	10m_v_component_of_wind (2023-5)
+	100m_u_component_of_wind (2023-5)
+	100m_v_component_of_wind (2023-5)
+	forecast_surface_roughness (2023-5)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-3/2026-10-11/bd4717cd1117cce267d69af868a78cec.nc
+
+bd4717cd1117cce267d69af868a78cec.nc:   0%|          | 0.00/14.6M [00:00<?, ?B/s]
+bd4717cd1117cce267d69af868a78cec.nc:   7%|▋         | 1.00M/14.6M [00:01<00:19, 750kB/s]
+bd4717cd1117cce267d69af868a78cec.nc:  14%|█▎        | 2.00M/14.6M [00:01<00:09, 1.37MB/s]
+bd4717cd1117cce267d69af868a78cec.nc:  27%|██▋       | 4.00M/14.6M [00:01<00:03, 2.96MB/s]
+bd4717cd1117cce267d69af868a78cec.nc:  34%|███▍      | 5.00M/14.6M [00:02<00:03, 3.30MB/s]
+bd4717cd1117cce267d69af868a78cec.nc:  41%|████      | 6.00M/14.6M [00:02<00:02, 4.04MB/s]
+bd4717cd1117cce267d69af868a78cec.nc:  48%|████▊     | 7.00M/14.6M [00:02<00:01, 4.18MB/s]
+bd4717cd1117cce267d69af868a78cec.nc:  55%|█████▍    | 8.00M/14.6M [00:02<00:01, 4.29MB/s]
+bd4717cd1117cce267d69af868a78cec.nc:  62%|██████▏   | 9.00M/14.6M [00:02<00:01, 5.07MB/s]
+bd4717cd1117cce267d69af868a78cec.nc:  68%|██████▊   | 10.0M/14.6M [00:03<00:00, 4.90MB/s]
+bd4717cd1117cce267d69af868a78cec.nc:  75%|███████▌  | 11.0M/14.6M [00:03<00:00, 4.79MB/s]
+bd4717cd1117cce267d69af868a78cec.nc:  82%|████████▏ | 12.0M/14.6M [00:03<00:00, 5.57MB/s]
+bd4717cd1117cce267d69af868a78cec.nc:  89%|████████▉ | 13.0M/14.6M [00:03<00:00, 5.29MB/s]
+bd4717cd1117cce267d69af868a78cec.nc:  96%|█████████▌| 14.0M/14.6M [00:03<00:00, 5.88MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	2m_temperature (2023-6)
+	soil_temperature_level_4 (2023-6)
+	2m_dewpoint_temperature (2023-6)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-3/2026-10-11/12ed427da6a9564e38d8765ef3374075.nc
+
+12ed427da6a9564e38d8765ef3374075.nc:   0%|          | 0.00/5.28M [00:00<?, ?B/s]
+12ed427da6a9564e38d8765ef3374075.nc:  19%|█▉        | 1.00M/5.28M [00:01<00:06, 724kB/s]
+12ed427da6a9564e38d8765ef3374075.nc:  38%|███▊      | 2.00M/5.28M [00:01<00:02, 1.46MB/s]
+12ed427da6a9564e38d8765ef3374075.nc:  76%|███████▌  | 4.00M/5.28M [00:01<00:00, 3.31MB/s]
+12ed427da6a9564e38d8765ef3374075.nc:  95%|█████████▍| 5.00M/5.28M [00:01<00:00, 3.91MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	runoff (2023-6)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-3/2026-10-11/769134c0a2f77e58ee958881394c0602.nc
+
+769134c0a2f77e58ee958881394c0602.nc:   0%|          | 0.00/1.13M [00:00<?, ?B/s]
+769134c0a2f77e58ee958881394c0602.nc:  88%|████████▊ | 1.00M/1.13M [00:01<00:00, 699kB/s]
+                                                                                        
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	surface_net_solar_radiation (2023-6)
+	surface_solar_radiation_downwards (2023-6)
+	toa_incident_solar_radiation (2023-6)
+	total_sky_direct_solar_radiation_at_surface (2023-6)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-2/2026-10-11/7f00b899ae0d077c328c4fbcece04b23.nc
+
+7f00b899ae0d077c328c4fbcece04b23.nc:   0%|          | 0.00/5.15M [00:00<?, ?B/s]
+7f00b899ae0d077c328c4fbcece04b23.nc:  19%|█▉        | 1.00M/5.15M [00:01<00:05, 754kB/s]
+7f00b899ae0d077c328c4fbcece04b23.nc:  39%|███▉      | 2.00M/5.15M [00:01<00:02, 1.63MB/s]
+7f00b899ae0d077c328c4fbcece04b23.nc:  78%|███████▊  | 4.00M/5.15M [00:01<00:00, 3.46MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	10m_u_component_of_wind (2023-6)
+	10m_v_component_of_wind (2023-6)
+	100m_u_component_of_wind (2023-6)
+	100m_v_component_of_wind (2023-6)
+	forecast_surface_roughness (2023-6)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-2/2026-10-11/7de1ccd7fc0a113afd446708e72a0a43.nc
+
+7de1ccd7fc0a113afd446708e72a0a43.nc:   0%|          | 0.00/14.4M [00:00<?, ?B/s]
+7de1ccd7fc0a113afd446708e72a0a43.nc:   7%|▋         | 1.00M/14.4M [00:01<00:19, 735kB/s]
+7de1ccd7fc0a113afd446708e72a0a43.nc:  14%|█▍        | 2.00M/14.4M [00:01<00:09, 1.43MB/s]
+7de1ccd7fc0a113afd446708e72a0a43.nc:  28%|██▊       | 4.00M/14.4M [00:01<00:03, 3.01MB/s]
+7de1ccd7fc0a113afd446708e72a0a43.nc:  35%|███▍      | 5.00M/14.4M [00:02<00:02, 3.78MB/s]
+7de1ccd7fc0a113afd446708e72a0a43.nc:  42%|████▏     | 6.00M/14.4M [00:02<00:02, 3.96MB/s]
+7de1ccd7fc0a113afd446708e72a0a43.nc:  49%|████▊     | 7.00M/14.4M [00:02<00:01, 4.75MB/s]
+7de1ccd7fc0a113afd446708e72a0a43.nc:  55%|█████▌    | 8.00M/14.4M [00:02<00:01, 5.50MB/s]
+7de1ccd7fc0a113afd446708e72a0a43.nc:  62%|██████▏   | 9.00M/14.4M [00:02<00:00, 6.22MB/s]
+7de1ccd7fc0a113afd446708e72a0a43.nc:  69%|██████▉   | 10.0M/14.4M [00:02<00:00, 6.32MB/s]
+7de1ccd7fc0a113afd446708e72a0a43.nc:  76%|███████▌  | 11.0M/14.4M [00:02<00:00, 6.05MB/s]
+7de1ccd7fc0a113afd446708e72a0a43.nc:  83%|████████▎ | 12.0M/14.4M [00:03<00:00, 4.61MB/s]
+7de1ccd7fc0a113afd446708e72a0a43.nc:  90%|█████████ | 13.0M/14.4M [00:03<00:00, 4.55MB/s]
+7de1ccd7fc0a113afd446708e72a0a43.nc:  97%|█████████▋| 14.0M/14.4M [00:03<00:00, 4.46MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	2m_temperature (2023-7)
+	soil_temperature_level_4 (2023-7)
+	2m_dewpoint_temperature (2023-7)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-1/2026-10-11/b087516779c1d5eecec67adeb0b6302f.nc
+
+b087516779c1d5eecec67adeb0b6302f.nc:   0%|          | 0.00/5.39M [00:00<?, ?B/s]
+b087516779c1d5eecec67adeb0b6302f.nc:  19%|█▊        | 1.00M/5.39M [00:01<00:05, 805kB/s]
+b087516779c1d5eecec67adeb0b6302f.nc:  37%|███▋      | 2.00M/5.39M [00:01<00:02, 1.73MB/s]
+b087516779c1d5eecec67adeb0b6302f.nc:  74%|███████▍  | 4.00M/5.39M [00:01<00:00, 3.64MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	runoff (2023-7)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-3/2026-10-11/7d333e233a66c471e2922f86f337c266.nc
+
+7d333e233a66c471e2922f86f337c266.nc:   0%|          | 0.00/1.23M [00:00<?, ?B/s]
+7d333e233a66c471e2922f86f337c266.nc:  81%|████████▏ | 1.00M/1.23M [00:01<00:00, 741kB/s]
+                                                                                        
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	surface_net_solar_radiation (2023-7)
+	surface_solar_radiation_downwards (2023-7)
+	toa_incident_solar_radiation (2023-7)
+	total_sky_direct_solar_radiation_at_surface (2023-7)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-3/2026-10-11/63614fbbeb5782f2677dbc40b22da061.nc
+
+63614fbbeb5782f2677dbc40b22da061.nc:   0%|          | 0.00/5.33M [00:00<?, ?B/s]
+63614fbbeb5782f2677dbc40b22da061.nc:  19%|█▉        | 1.00M/5.33M [00:01<00:06, 730kB/s]
+63614fbbeb5782f2677dbc40b22da061.nc:  38%|███▊      | 2.00M/5.33M [00:01<00:02, 1.50MB/s]
+63614fbbeb5782f2677dbc40b22da061.nc:  75%|███████▌  | 4.00M/5.33M [00:01<00:00, 3.35MB/s]
+63614fbbeb5782f2677dbc40b22da061.nc:  94%|█████████▍| 5.00M/5.33M [00:01<00:00, 4.19MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	10m_u_component_of_wind (2023-7)
+	10m_v_component_of_wind (2023-7)
+	100m_u_component_of_wind (2023-7)
+	100m_v_component_of_wind (2023-7)
+	forecast_surface_roughness (2023-7)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-3/2026-10-11/67c7af5bf9f34a3c65ba829eb9449362.nc
+
+67c7af5bf9f34a3c65ba829eb9449362.nc:   0%|          | 0.00/14.9M [00:00<?, ?B/s]
+67c7af5bf9f34a3c65ba829eb9449362.nc:   7%|▋         | 1.00M/14.9M [00:01<00:20, 712kB/s]
+67c7af5bf9f34a3c65ba829eb9449362.nc:  13%|█▎        | 2.00M/14.9M [00:01<00:09, 1.40MB/s]
+67c7af5bf9f34a3c65ba829eb9449362.nc:  27%|██▋       | 4.00M/14.9M [00:02<00:04, 2.71MB/s]
+67c7af5bf9f34a3c65ba829eb9449362.nc:  40%|████      | 6.00M/14.9M [00:02<00:02, 4.08MB/s]
+67c7af5bf9f34a3c65ba829eb9449362.nc:  47%|████▋     | 7.00M/14.9M [00:02<00:01, 4.65MB/s]
+67c7af5bf9f34a3c65ba829eb9449362.nc:  54%|█████▎    | 8.00M/14.9M [00:02<00:01, 4.62MB/s]
+67c7af5bf9f34a3c65ba829eb9449362.nc:  60%|██████    | 9.00M/14.9M [00:02<00:01, 5.35MB/s]
+67c7af5bf9f34a3c65ba829eb9449362.nc:  67%|██████▋   | 10.0M/14.9M [00:02<00:00, 5.97MB/s]
+67c7af5bf9f34a3c65ba829eb9449362.nc:  74%|███████▍  | 11.0M/14.9M [00:03<00:00, 5.55MB/s]
+67c7af5bf9f34a3c65ba829eb9449362.nc:  81%|████████  | 12.0M/14.9M [00:03<00:00, 6.17MB/s]
+67c7af5bf9f34a3c65ba829eb9449362.nc:  87%|████████▋ | 13.0M/14.9M [00:03<00:00, 6.77MB/s]
+67c7af5bf9f34a3c65ba829eb9449362.nc:  94%|█████████▍| 14.0M/14.9M [00:03<00:00, 6.01MB/s]
+67c7af5bf9f34a3c65ba829eb9449362.nc: 100%|██████████| 14.9M/14.9M [00:03<00:00, 6.38MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	2m_temperature (2023-8)
+	soil_temperature_level_4 (2023-8)
+	2m_dewpoint_temperature (2023-8)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-1/2026-10-11/fd52ba5c51b369c2994d20cf3f98e71b.nc
+
+fd52ba5c51b369c2994d20cf3f98e71b.nc:   0%|          | 0.00/5.41M [00:00<?, ?B/s]
+fd52ba5c51b369c2994d20cf3f98e71b.nc:  18%|█▊        | 1.00M/5.41M [00:01<00:06, 703kB/s]
+fd52ba5c51b369c2994d20cf3f98e71b.nc:  37%|███▋      | 2.00M/5.41M [00:01<00:02, 1.52MB/s]
+fd52ba5c51b369c2994d20cf3f98e71b.nc:  55%|█████▌    | 3.00M/5.41M [00:01<00:01, 2.42MB/s]
+fd52ba5c51b369c2994d20cf3f98e71b.nc: 100%|██████████| 5.41M/5.41M [00:01<00:00, 5.29MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	runoff (2023-8)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-1/2026-10-11/7c9a08b296a016dfbabaa8e88ff4ed4.nc
+
+7c9a08b296a016dfbabaa8e88ff4ed4.nc:   0%|          | 0.00/1.40M [00:00<?, ?B/s]
+7c9a08b296a016dfbabaa8e88ff4ed4.nc:  72%|███████▏  | 1.00M/1.40M [00:01<00:00, 749kB/s]
+                                                                                       
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	surface_net_solar_radiation (2023-8)
+	surface_solar_radiation_downwards (2023-8)
+	toa_incident_solar_radiation (2023-8)
+	total_sky_direct_solar_radiation_at_surface (2023-8)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-1/2026-10-11/6b92fc1f68d1cc9c266576cdbc6e0ad0.nc
+
+6b92fc1f68d1cc9c266576cdbc6e0ad0.nc:   0%|          | 0.00/5.24M [00:00<?, ?B/s]
+6b92fc1f68d1cc9c266576cdbc6e0ad0.nc:  19%|█▉        | 1.00M/5.24M [00:01<00:06, 639kB/s]
+6b92fc1f68d1cc9c266576cdbc6e0ad0.nc:  38%|███▊      | 2.00M/5.24M [00:01<00:02, 1.38MB/s]
+6b92fc1f68d1cc9c266576cdbc6e0ad0.nc:  57%|█████▋    | 3.00M/5.24M [00:02<00:01, 2.01MB/s]
+6b92fc1f68d1cc9c266576cdbc6e0ad0.nc:  76%|███████▋  | 4.00M/5.24M [00:02<00:00, 2.73MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	10m_u_component_of_wind (2023-8)
+	10m_v_component_of_wind (2023-8)
+	100m_u_component_of_wind (2023-8)
+	100m_v_component_of_wind (2023-8)
+	forecast_surface_roughness (2023-8)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-1/2026-10-11/dcb8eddc9c303c8e219eb8c61ca58ad4.nc
+
+dcb8eddc9c303c8e219eb8c61ca58ad4.nc:   0%|          | 0.00/15.0M [00:00<?, ?B/s]
+dcb8eddc9c303c8e219eb8c61ca58ad4.nc:   7%|▋         | 1.00M/15.0M [00:01<00:20, 719kB/s]
+dcb8eddc9c303c8e219eb8c61ca58ad4.nc:  13%|█▎        | 2.00M/15.0M [00:01<00:09, 1.41MB/s]
+dcb8eddc9c303c8e219eb8c61ca58ad4.nc:  27%|██▋       | 4.00M/15.0M [00:02<00:04, 2.70MB/s]
+dcb8eddc9c303c8e219eb8c61ca58ad4.nc:  33%|███▎      | 5.00M/15.0M [00:02<00:03, 3.43MB/s]
+dcb8eddc9c303c8e219eb8c61ca58ad4.nc:  40%|████      | 6.00M/15.0M [00:02<00:02, 4.20MB/s]
+dcb8eddc9c303c8e219eb8c61ca58ad4.nc:  47%|████▋     | 7.00M/15.0M [00:02<00:01, 4.97MB/s]
+dcb8eddc9c303c8e219eb8c61ca58ad4.nc:  53%|█████▎    | 8.00M/15.0M [00:02<00:01, 5.71MB/s]
+dcb8eddc9c303c8e219eb8c61ca58ad4.nc:  60%|██████    | 9.00M/15.0M [00:02<00:01, 5.27MB/s]
+dcb8eddc9c303c8e219eb8c61ca58ad4.nc:  67%|██████▋   | 10.0M/15.0M [00:02<00:00, 5.97MB/s]
+dcb8eddc9c303c8e219eb8c61ca58ad4.nc:  73%|███████▎  | 11.0M/15.0M [00:03<00:00, 6.46MB/s]
+dcb8eddc9c303c8e219eb8c61ca58ad4.nc:  80%|████████  | 12.0M/15.0M [00:03<00:00, 6.78MB/s]
+dcb8eddc9c303c8e219eb8c61ca58ad4.nc:  87%|████████▋ | 13.0M/15.0M [00:03<00:00, 5.83MB/s]
+dcb8eddc9c303c8e219eb8c61ca58ad4.nc:  94%|█████████▎| 14.0M/15.0M [00:03<00:00, 6.39MB/s]
+dcb8eddc9c303c8e219eb8c61ca58ad4.nc: 100%|██████████| 15.0M/15.0M [00:03<00:00, 6.79MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	2m_temperature (2023-9)
+	soil_temperature_level_4 (2023-9)
+	2m_dewpoint_temperature (2023-9)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-3/2026-10-11/246da5ecd33db9c132ecc3d4ca6ea5bb.nc
+
+246da5ecd33db9c132ecc3d4ca6ea5bb.nc:   0%|          | 0.00/5.10M [00:00<?, ?B/s]
+246da5ecd33db9c132ecc3d4ca6ea5bb.nc:  20%|█▉        | 1.00M/5.10M [00:01<00:05, 775kB/s]
+246da5ecd33db9c132ecc3d4ca6ea5bb.nc:  39%|███▉      | 2.00M/5.10M [00:01<00:02, 1.49MB/s]
+246da5ecd33db9c132ecc3d4ca6ea5bb.nc:  78%|███████▊  | 4.00M/5.10M [00:01<00:00, 3.07MB/s]
+246da5ecd33db9c132ecc3d4ca6ea5bb.nc:  98%|█████████▊| 5.00M/5.10M [00:01<00:00, 3.88MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	runoff (2023-9)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-3/2026-10-11/be8ae176f9fa11c968f855087890a12a.nc
+
+be8ae176f9fa11c968f855087890a12a.nc:   0%|          | 0.00/1.30M [00:00<?, ?B/s]
+be8ae176f9fa11c968f855087890a12a.nc:  77%|███████▋  | 1.00M/1.30M [00:01<00:00, 733kB/s]
+                                                                                        
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	surface_net_solar_radiation (2023-9)
+	surface_solar_radiation_downwards (2023-9)
+	toa_incident_solar_radiation (2023-9)
+	total_sky_direct_solar_radiation_at_surface (2023-9)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-3/2026-10-11/8ba86269b00d72bfca6a7fc1fdd22fd8.nc
+
+8ba86269b00d72bfca6a7fc1fdd22fd8.nc:   0%|          | 0.00/4.99M [00:00<?, ?B/s]
+8ba86269b00d72bfca6a7fc1fdd22fd8.nc:  20%|██        | 1.00M/4.99M [00:01<00:05, 710kB/s]
+8ba86269b00d72bfca6a7fc1fdd22fd8.nc:  40%|████      | 2.00M/4.99M [00:01<00:02, 1.52MB/s]
+8ba86269b00d72bfca6a7fc1fdd22fd8.nc:  60%|██████    | 3.00M/4.99M [00:01<00:00, 2.16MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	10m_u_component_of_wind (2023-9)
+	10m_v_component_of_wind (2023-9)
+	100m_u_component_of_wind (2023-9)
+	100m_v_component_of_wind (2023-9)
+	forecast_surface_roughness (2023-9)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-1/2026-10-11/27bdd00187f1116448d5f41a147952e0.nc
+
+27bdd00187f1116448d5f41a147952e0.nc:   0%|          | 0.00/14.5M [00:00<?, ?B/s]
+27bdd00187f1116448d5f41a147952e0.nc:   7%|▋         | 1.00M/14.5M [00:01<00:19, 719kB/s]
+27bdd00187f1116448d5f41a147952e0.nc:  14%|█▍        | 2.00M/14.5M [00:01<00:08, 1.58MB/s]
+27bdd00187f1116448d5f41a147952e0.nc:  21%|██        | 3.00M/14.5M [00:01<00:04, 2.47MB/s]
+27bdd00187f1116448d5f41a147952e0.nc:  35%|███▍      | 5.00M/14.5M [00:01<00:02, 4.83MB/s]
+27bdd00187f1116448d5f41a147952e0.nc:  48%|████▊     | 7.00M/14.5M [00:02<00:01, 6.04MB/s]
+27bdd00187f1116448d5f41a147952e0.nc:  62%|██████▏   | 9.00M/14.5M [00:02<00:00, 7.51MB/s]
+27bdd00187f1116448d5f41a147952e0.nc:  76%|███████▌  | 11.0M/14.5M [00:02<00:00, 9.29MB/s]
+27bdd00187f1116448d5f41a147952e0.nc:  90%|████████▉ | 13.0M/14.5M [00:02<00:00, 9.41MB/s]
+27bdd00187f1116448d5f41a147952e0.nc: 100%|██████████| 14.5M/14.5M [00:02<00:00, 9.86MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	2m_temperature (2023-10)
+	soil_temperature_level_4 (2023-10)
+	2m_dewpoint_temperature (2023-10)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-2/2026-10-11/fb11abdea94327a8190afc3a001f98c0.nc
+
+fb11abdea94327a8190afc3a001f98c0.nc:   0%|          | 0.00/5.31M [00:00<?, ?B/s]
+fb11abdea94327a8190afc3a001f98c0.nc:  19%|█▉        | 1.00M/5.31M [00:01<00:06, 698kB/s]
+fb11abdea94327a8190afc3a001f98c0.nc:  38%|███▊      | 2.00M/5.31M [00:01<00:02, 1.53MB/s]
+fb11abdea94327a8190afc3a001f98c0.nc:  56%|█████▋    | 3.00M/5.31M [00:01<00:01, 2.15MB/s]
+fb11abdea94327a8190afc3a001f98c0.nc: 100%|██████████| 5.31M/5.31M [00:01<00:00, 4.70MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	runoff (2023-10)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-1/2026-10-11/45260c92f6ec661961e5eb7a4da04289.nc
+
+45260c92f6ec661961e5eb7a4da04289.nc:   0%|          | 0.00/1.09M [00:00<?, ?B/s]
+45260c92f6ec661961e5eb7a4da04289.nc:  92%|█████████▏| 1.00M/1.09M [00:01<00:00, 708kB/s]
+                                                                                        
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	surface_net_solar_radiation (2023-10)
+	surface_solar_radiation_downwards (2023-10)
+	toa_incident_solar_radiation (2023-10)
+	total_sky_direct_solar_radiation_at_surface (2023-10)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-1/2026-10-11/48a706016e42684016759cff87506101.nc
+
+48a706016e42684016759cff87506101.nc:   0%|          | 0.00/5.02M [00:00<?, ?B/s]
+48a706016e42684016759cff87506101.nc:  20%|█▉        | 1.00M/5.02M [00:01<00:05, 722kB/s]
+48a706016e42684016759cff87506101.nc:  40%|███▉      | 2.00M/5.02M [00:01<00:02, 1.57MB/s]
+48a706016e42684016759cff87506101.nc:  60%|█████▉    | 3.00M/5.02M [00:01<00:00, 2.51MB/s]
+48a706016e42684016759cff87506101.nc: 100%|█████████▉| 5.00M/5.02M [00:01<00:00, 4.86MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	2m_temperature (2023-11)
+	soil_temperature_level_4 (2023-11)
+	2m_dewpoint_temperature (2023-11)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-2/2026-10-11/f34e480204697add24cd6861c00924a8.nc
+
+f34e480204697add24cd6861c00924a8.nc:   0%|          | 0.00/5.23M [00:00<?, ?B/s]
+f34e480204697add24cd6861c00924a8.nc:  19%|█▉        | 1.00M/5.23M [00:01<00:06, 711kB/s]
+f34e480204697add24cd6861c00924a8.nc:  38%|███▊      | 2.00M/5.23M [00:01<00:02, 1.54MB/s]
+f34e480204697add24cd6861c00924a8.nc:  57%|█████▋    | 3.00M/5.23M [00:01<00:00, 2.44MB/s]
+f34e480204697add24cd6861c00924a8.nc:  96%|█████████▌| 5.00M/5.23M [00:01<00:00, 4.82MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	10m_u_component_of_wind (2023-10)
+	10m_v_component_of_wind (2023-10)
+	100m_u_component_of_wind (2023-10)
+	100m_v_component_of_wind (2023-10)
+	forecast_surface_roughness (2023-10)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-2/2026-10-11/1028f34354a9842e6679fe97be4ba13d.nc
+
+1028f34354a9842e6679fe97be4ba13d.nc:   0%|          | 0.00/14.7M [00:00<?, ?B/s]
+1028f34354a9842e6679fe97be4ba13d.nc:   7%|▋         | 1.00M/14.7M [00:01<00:19, 743kB/s]
+1028f34354a9842e6679fe97be4ba13d.nc:  14%|█▎        | 2.00M/14.7M [00:01<00:09, 1.45MB/s]
+1028f34354a9842e6679fe97be4ba13d.nc:  27%|██▋       | 4.00M/14.7M [00:02<00:04, 2.75MB/s]
+1028f34354a9842e6679fe97be4ba13d.nc:  41%|████      | 6.00M/14.7M [00:02<00:02, 4.07MB/s]
+1028f34354a9842e6679fe97be4ba13d.nc:  48%|████▊     | 7.00M/14.7M [00:02<00:01, 4.71MB/s]
+1028f34354a9842e6679fe97be4ba13d.nc:  55%|█████▍    | 8.00M/14.7M [00:02<00:01, 4.64MB/s]
+1028f34354a9842e6679fe97be4ba13d.nc:  61%|██████▏   | 9.00M/14.7M [00:02<00:01, 5.34MB/s]
+1028f34354a9842e6679fe97be4ba13d.nc:  68%|██████▊   | 10.0M/14.7M [00:02<00:00, 5.99MB/s]
+1028f34354a9842e6679fe97be4ba13d.nc:  75%|███████▌  | 11.0M/14.7M [00:03<00:00, 5.47MB/s]
+1028f34354a9842e6679fe97be4ba13d.nc:  82%|████████▏ | 12.0M/14.7M [00:03<00:00, 6.11MB/s]
+1028f34354a9842e6679fe97be4ba13d.nc:  89%|████████▊ | 13.0M/14.7M [00:03<00:00, 6.70MB/s]
+1028f34354a9842e6679fe97be4ba13d.nc:  96%|█████████▌| 14.0M/14.7M [00:03<00:00, 6.76MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	surface_net_solar_radiation (2023-11)
+	surface_solar_radiation_downwards (2023-11)
+	toa_incident_solar_radiation (2023-11)
+	total_sky_direct_solar_radiation_at_surface (2023-11)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-2/2026-10-11/80280f19744787e1cd395801a2eb94cf.nc
+
+80280f19744787e1cd395801a2eb94cf.nc:   0%|          | 0.00/4.74M [00:00<?, ?B/s]
+80280f19744787e1cd395801a2eb94cf.nc:  21%|██        | 1.00M/4.74M [00:01<00:05, 757kB/s]
+80280f19744787e1cd395801a2eb94cf.nc:  42%|████▏     | 2.00M/4.74M [00:01<00:01, 1.52MB/s]
+80280f19744787e1cd395801a2eb94cf.nc:  84%|████████▍ | 4.00M/4.74M [00:01<00:00, 3.17MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	runoff (2023-11)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-3/2026-10-11/a65c45269a99ec0fce27ffecff5d58fd.nc
+
+a65c45269a99ec0fce27ffecff5d58fd.nc:   0%|          | 0.00/819k [00:00<?, ?B/s]
+a65c45269a99ec0fce27ffecff5d58fd.nc: 100%|██████████| 819k/819k [00:01<00:00, 628kB/s]
+                                                                                      
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	2m_temperature (2023-12)
+	soil_temperature_level_4 (2023-12)
+	2m_dewpoint_temperature (2023-12)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-1/2026-10-11/4ff8b3bc1bccc618406049a37ddb3f3b.nc
+
+4ff8b3bc1bccc618406049a37ddb3f3b.nc:   0%|          | 0.00/5.58M [00:00<?, ?B/s]
+4ff8b3bc1bccc618406049a37ddb3f3b.nc:  18%|█▊        | 1.00M/5.58M [00:01<00:06, 746kB/s]
+4ff8b3bc1bccc618406049a37ddb3f3b.nc:  36%|███▌      | 2.00M/5.58M [00:01<00:02, 1.61MB/s]
+4ff8b3bc1bccc618406049a37ddb3f3b.nc:  54%|█████▎    | 3.00M/5.58M [00:01<00:01, 2.36MB/s]
+4ff8b3bc1bccc618406049a37ddb3f3b.nc:  90%|████████▉ | 5.00M/5.58M [00:01<00:00, 3.97MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	10m_u_component_of_wind (2023-11)
+	10m_v_component_of_wind (2023-11)
+	100m_u_component_of_wind (2023-11)
+	100m_v_component_of_wind (2023-11)
+	forecast_surface_roughness (2023-11)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-2/2026-10-11/526ab5665f40fc7acbda1777edaf177.nc
+
+526ab5665f40fc7acbda1777edaf177.nc:   0%|          | 0.00/13.9M [00:00<?, ?B/s]
+526ab5665f40fc7acbda1777edaf177.nc:   7%|▋         | 1.00M/13.9M [00:01<00:19, 703kB/s]
+526ab5665f40fc7acbda1777edaf177.nc:  14%|█▍        | 2.00M/13.9M [00:01<00:09, 1.33MB/s]
+526ab5665f40fc7acbda1777edaf177.nc:  29%|██▊       | 4.00M/13.9M [00:02<00:03, 2.85MB/s]
+526ab5665f40fc7acbda1777edaf177.nc:  36%|███▌      | 5.00M/13.9M [00:02<00:02, 3.59MB/s]
+526ab5665f40fc7acbda1777edaf177.nc:  43%|████▎     | 6.00M/13.9M [00:02<00:01, 4.39MB/s]
+526ab5665f40fc7acbda1777edaf177.nc:  50%|█████     | 7.00M/13.9M [00:02<00:01, 5.18MB/s]
+526ab5665f40fc7acbda1777edaf177.nc:  57%|█████▋    | 8.00M/13.9M [00:02<00:01, 5.00MB/s]
+526ab5665f40fc7acbda1777edaf177.nc:  65%|██████▍   | 9.00M/13.9M [00:02<00:00, 5.71MB/s]
+526ab5665f40fc7acbda1777edaf177.nc:  72%|███████▏  | 10.0M/13.9M [00:02<00:00, 6.48MB/s]
+526ab5665f40fc7acbda1777edaf177.nc:  79%|███████▉  | 11.0M/13.9M [00:02<00:00, 6.93MB/s]
+526ab5665f40fc7acbda1777edaf177.nc:  86%|████████▌ | 12.0M/13.9M [00:03<00:00, 6.07MB/s]
+526ab5665f40fc7acbda1777edaf177.nc:  93%|█████████▎| 13.0M/13.9M [00:03<00:00, 6.69MB/s]
+526ab5665f40fc7acbda1777edaf177.nc: 100%|██████████| 13.9M/13.9M [00:03<00:00, 7.13MB/s]
+                                                                                        
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	surface_net_solar_radiation (2023-12)
+	surface_solar_radiation_downwards (2023-12)
+	toa_incident_solar_radiation (2023-12)
+	total_sky_direct_solar_radiation_at_surface (2023-12)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-1/2026-10-11/ae0f34505bc8f8b7f248344ce1d5eb9e.nc
+
+ae0f34505bc8f8b7f248344ce1d5eb9e.nc:   0%|          | 0.00/4.50M [00:00<?, ?B/s]
+ae0f34505bc8f8b7f248344ce1d5eb9e.nc:  22%|██▏       | 1.00M/4.50M [00:01<00:04, 769kB/s]
+ae0f34505bc8f8b7f248344ce1d5eb9e.nc:  44%|████▍     | 2.00M/4.50M [00:01<00:01, 1.65MB/s]
+ae0f34505bc8f8b7f248344ce1d5eb9e.nc:  67%|██████▋   | 3.00M/4.50M [00:01<00:00, 2.64MB/s]
+ae0f34505bc8f8b7f248344ce1d5eb9e.nc:  89%|████████▉ | 4.00M/4.50M [00:01<00:00, 3.69MB/s]
+                                                                                         
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	runoff (2023-12)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-1/2026-10-11/7b1c706d989f3379a796c3a774458bf2.nc
+
+7b1c706d989f3379a796c3a774458bf2.nc:   0%|          | 0.00/571k [00:00<?, ?B/s]
+7b1c706d989f3379a796c3a774458bf2.nc: 100%|██████████| 571k/571k [00:01<00:00, 435kB/s]
+                                                                                      
+INFO:atlite.datasets.era5:CDS: Downloading variables
+	10m_u_component_of_wind (2023-12)
+	10m_v_component_of_wind (2023-12)
+	100m_u_component_of_wind (2023-12)
+	100m_v_component_of_wind (2023-12)
+	forecast_surface_roughness (2023-12)
+
+INFO:multiurl.base:Downloading https://object-store.os-api.cci2.ecmwf.int:443/cci2-prod-cache-3/2026-10-11/46df88e82575679f562bbfa6eb4b417f.nc
+
+46df88e82575679f562bbfa6eb4b417f.nc:   0%|          | 0.00/13.9M [00:00<?, ?B/s]
+46df88e82575679f562bbfa6eb4b417f.nc:   7%|▋         | 1.00M/13.9M [00:01<00:18, 727kB/s]
+46df88e82575679f562bbfa6eb4b417f.nc:  14%|█▍        | 2.00M/13.9M [00:01<00:08, 1.50MB/s]
+46df88e82575679f562bbfa6eb4b417f.nc:  29%|██▉       | 4.00M/13.9M [00:01<00:03, 3.34MB/s]
+46df88e82575679f562bbfa6eb4b417f.nc:  36%|███▌      | 5.00M/13.9M [00:01<00:02, 4.10MB/s]
+46df88e82575679f562bbfa6eb4b417f.nc:  43%|████▎     | 6.00M/13.9M [00:02<00:01, 4.95MB/s]
+46df88e82575679f562bbfa6eb4b417f.nc:  50%|█████     | 7.00M/13.9M [00:02<00:01, 5.80MB/s]
+46df88e82575679f562bbfa6eb4b417f.nc:  58%|█████▊    | 8.00M/13.9M [00:02<00:00, 6.36MB/s]
+46df88e82575679f562bbfa6eb4b417f.nc:  65%|██████▍   | 9.00M/13.9M [00:02<00:00, 6.28MB/s]
+46df88e82575679f562bbfa6eb4b417f.nc:  72%|███████▏  | 10.0M/13.9M [00:02<00:00, 6.28MB/s]
+46df88e82575679f562bbfa6eb4b417f.nc:  79%|███████▉  | 11.0M/13.9M [00:02<00:00, 6.81MB/s]
+46df88e82575679f562bbfa6eb4b417f.nc:  86%|████████▋ | 12.0M/13.9M [00:02<00:00, 6.62MB/s]
+46df88e82575679f562bbfa6eb4b417f.nc:  94%|█████████▎| 13.0M/13.9M [00:03<00:00, 6.40MB/s]
+46df88e82575679f562bbfa6eb4b417f.nc: 100%|██████████| 13.9M/13.9M [00:03<00:00, 6.89MB/s]
+                                                                                         
