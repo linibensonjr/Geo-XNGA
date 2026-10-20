@@ -1,0 +1,9 @@
+﻿Parameter,
+Heat capacity,0.039444448
+Input temperature (K),298.15
+Input pressure (bar),25
+Isentropic exponent,1.402
+Isentropic efficiency,0.8
+Compressor lifetime (a),15
+Compressor capex coefficient (USD per kilograms H2 per day),43389.93
+Compressor opex (% capex),0.04

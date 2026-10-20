@@ -1,9 +1,9 @@
 # Wildcards:
 scenario:
-  country: ['NA']
+  country: ['NG']
   weather_year: [2023]
   # Can be 'hydrogen' or 'ammonia' or 'copper'
-  plant_type: 'ammonia'
+  plant_type: 'hydrogen'
 
 # Weather data:
 # Change to a number that would be added to weather_year above and used as
@@ -17,7 +17,7 @@ freq: '1H'
 # Modify generators_dict to hold the generators you would like to use. Can
 # be 'solar', 'wind', 'hydro', 'geothermal', and 'nuclear'
 # Make sure it is in the same style as below
-generators_dict: {'solar' : [], 'wind' : [], 'hydro' : [], 'geothermal' : [], 'nuclear' : [],}
+generators_dict: {'solar' : [], 'wind' : [],}
 panel: 'CSi'
 turbine: 'NREL_ReferenceTurbine_2020ATB_4MW'
 gen_capacity:
@@ -35,7 +35,7 @@ efficiency:
     nuclear: 0.33
 
 # Other:
-solver : 'gurobi'
+solver : 'glpk'
 
 water:
     has_ocean_dists: True
@@ -52,7 +52,7 @@ transport:
     pipeline_construction: True
 
 # Make sure this matches the currency used in your parameter files
-currency: 'euros'
+currency: 'USD'
 
 # Set to True if only demand center results are wanted, all others will be set 
 # to 'null'

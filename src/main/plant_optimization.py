@@ -422,6 +422,8 @@ if __name__ == "__main__":
     start_date = f'{weather_year}-01-01'
     end_date = f'{end_weather_year}-01-01'
     solver = snakemake.config['solver']
+    # Silencing options are Gurobi-specific; other solvers (e.g. glpk) hang on unknown options
+    quiet_options = {'LogToConsole': 0, 'OutputFlag': 0} if solver == 'gurobi' else {}
     generators = snakemake.config['generators_dict']
     hexagons = gpd.read_file(snakemake.input.hexagons)
     # Get a uniform capacity layout for all grid cells. https://atlite.readthedocs.io/en/master/ref_api.html
@@ -715,7 +717,7 @@ if __name__ == "__main__":
                 # Offgrid-only optimisation of facility
                 # Solve offgrid 
                 network_class.n.lopf(solver_name=solver,
-                                    solver_options = {'OutputFlag': 0},
+                                    solver_options = quiet_options,
                                     pyomo=False,
                                     )
 
@@ -739,7 +741,7 @@ if __name__ == "__main__":
 
                 # Solve hybrid
                 network_class.n.lopf(solver_name=solver,
-                                    solver_options = {'OutputFlag': 0},
+                                    solver_options = quiet_options,
                                     pyomo=False,
                                     )
                 
@@ -811,7 +813,7 @@ if __name__ == "__main__":
 
                         # Solve feedstocks offgrid system
                         fs_network_class.n.lopf(solver_name=solver,
-                                            solver_options = {'OutputFlag': 0},
+                                            solver_options = quiet_options,
                                             pyomo=False,
                                             )
                         
@@ -885,7 +887,7 @@ if __name__ == "__main__":
                 if plant_type == "hydrogen":
                     # Solve hydrogen offgrid
                     network_class.n.lopf(solver_name=solver,
-                        solver_options = {'LogToConsole':0, 'OutputFlag':0},
+                        solver_options = quiet_options,
                         pyomo=False,
                         )
                     
@@ -894,7 +896,7 @@ if __name__ == "__main__":
                 elif plant_type == "ammonia":
                     # Solve ammonia offgrid
                     network_class.n.lopf(solver_name=solver,
-                        solver_options={'LogToConsole': 0, 'OutputFlag': 0},
+                        solver_options=quiet_options,
                         pyomo=True,
                         extra_functionality=_nh3_pyomo_constraints)
                     
